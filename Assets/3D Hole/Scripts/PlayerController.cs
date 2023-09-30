@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,10 +22,10 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetMouseButton(0))
         {
-            // ½ÃÀÛ ÁöÁ¡°ú ÀÌµ¿ÇÑ ÁöÁ¡ÀÇ Â÷ÀÌ°ª ±¸ÇÏ±â
+            // ì‹œì‘ ì§€ì ê³¼ ì´ë™í•œ ì§€ì ì˜ ì°¨ì´ê°’ êµ¬í•˜ê¸°
             Vector3 difference = Input.mousePosition - clickedScreenPosition;
 
-            // Â÷ÀÌ°ªÀ» Á¤±ÔÈ­ ½ÃÄÑ¼­ ¹æÇâ ±¸ÇÏ±â
+            // ì°¨ì´ê°’ì„ ì •ê·œí™” ì‹œì¼œì„œ ë°©í–¥ êµ¬í•˜ê¸°
             Vector3 direction = difference.normalized;
 
             float maxScreenDistance = screenPositionFollowThreshold * Screen.height;

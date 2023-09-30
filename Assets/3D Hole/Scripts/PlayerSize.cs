@@ -6,6 +6,7 @@ public class PlayerSize : MonoBehaviour
 {
     public void CollectibleCollected(float objectSize)
     {
-        Debug.Log("Increase the size by : " + objectSize);
+        //Debug.Log("Increase the size by : " + objectSize);
+        transform.localScale += objectSize * Vector3.one;
     }
 }
