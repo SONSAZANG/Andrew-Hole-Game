@@ -4,9 +4,24 @@ using UnityEngine;
 
 public class PlayerSize : MonoBehaviour
 {
+    [Header(" Settings ")]
+    [SerializeField] private float scaleIncreaseThreshold;
+    [SerializeField] private float scaleStep;
+    private float scaleValue;
+
     public void CollectibleCollected(float objectSize)
     {
-        //Debug.Log("Increase the size by : " + objectSize);
-        transform.localScale += objectSize * Vector3.one;
+        scaleValue += objectSize;
+
+        if (scaleValue >= scaleIncreaseThreshold)
+        {
+            IncreaseScale();
+            scaleValue = scaleValue % scaleIncreaseThreshold;
+        }
+    }
+
+    private void IncreaseScale()
+    {
+        transform.localScale += scaleStep * Vector3.one;
     }
 }
